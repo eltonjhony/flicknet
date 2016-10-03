@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "com.world.movies.android.app.flicknet"
+        minSdkVersion 17
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        jackOptions {
+            enabled true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    repositories {
+        mavenCentral()
+    }
+    productFlavors {
+        dev {
+            buildConfigField("String", "MOVIES_API_URL_BASE", '"http://api.themoviedb.org/3/movie/"')
+            buildConfigField("String", "TRANSLATE_API_URL_BASE", '"https://translate.yandex.net/api/v1.5/tr.json/translate"')
+            buildConfigField("String", "YOUTUBE_KEY", '"YOUR_YOUTUBE_KEY"')
+            buildConfigField("String", "APPID", '"YOUR_GOOGLE_KEY"')
+            buildConfigField("String", "TRANSLATE_APPID", '"YOUR_YANDEX_KEY"')
+        }
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:support-compat:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:palette-v7:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile files('libs/YouTubeAndroidPlayerApi.jar')
+    compile 'com.android.support:support-v4:24.2.1'
+}

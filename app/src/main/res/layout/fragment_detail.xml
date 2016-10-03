@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/detail_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:id="@+id/container_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/poster_image_view"
+                android:layout_width="100dp"
+                android:layout_height="140dp"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop" />
+
+            <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+                android:id="@+id/view_release_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/color_black"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/poster_image_view"
+                android:text="Release Date: " />
+
+            <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+                android:id="@+id/view_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/color_black"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/view_release_date_label"
+                android:text="2016-03-13" />
+
+            <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+                android:id="@+id/view_popularity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/color_black"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/poster_image_view"
+                android:layout_below="@+id/view_release_date"
+                android:text="Popularity: " />
+
+            <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+                android:id="@+id/view_popularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/color_black"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/view_popularity_label"
+                android:layout_below="@+id/view_release_date"
+                android:text="324534,32" />
+
+            <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+                android:id="@+id/view_vote_count_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/color_black"
+                android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/poster_image_view"
+                android:layout_below="@+id/view_popularity"
+                android:text="Vote count: " />
+
+            <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+                android:id="@+id/view_vote_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="12sp"
+                android:textColor="@color/color_black"
+                android:paddingLeft="5dp"
+                android:layout_toRightOf="@+id/view_vote_count_label"
+                android:layout_below="@+id/view_popularity"
+                android:text="324" />
+
+            <RatingBar
+                android:id="@+id/view_vote_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:transformPivotX="0dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="5dp"
+                android:progressTint="@color/accent"
+                android:layout_toRightOf="@+id/poster_image_view"
+                android:layout_below="@+id/view_vote_count"
+                android:rating="5.0"
+                android:stepSize="0.05"
+                android:max="5"
+                android:isIndicator="true"
+                android:numStars="5" />
+
+        </RelativeLayout>
+
+        <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+            android:id="@+id/resume_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/container_top"
+            android:paddingTop="10dp"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="2"
+            android:text="Resume" />
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/resume_text_view"
+            android:layout_marginTop="5dp">
+
+            <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+                android:id="@+id/summary_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"
+                android:text="Summary text" />
+
+        </android.support.v7.widget.CardView>
+
+        <com.world.movies.android.app.flicknet.ui.view.FlicknetTextView
+            android:id="@+id/trailer_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_view"
+            android:paddingTop="20dp"
+            android:text="Trailers" />
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/container_trailer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MergeRootFrame"
+            android:layout_below="@+id/trailer_text_view"
+            android:layout_marginTop="10dp"
+            tools:context=".ui.DetailActivity"/>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

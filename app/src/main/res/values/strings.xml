@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Flicknet</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="pref_order">order</string>
+    <string name="pref_order_label">Order by</string>
+
+    <string name="pref_order_popular" translatable="false">popular</string>
+    <string name="pref_order_top_rated" translatable="false">top_rated</string>
+    <string name="pref_order_now_playing" translatable="false">now_playing</string>
+    <string name="pref_order_upcoming" translatable="false">upcoming</string>
+
+    <string name="category_popular" >Popular</string>
+    <string name="category_top_rated" >Top Rated</string>
+    <string name="category_now_playing" >Now Playing</string>
+    <string name="category_upcoming" >Upcoming</string>
+
+    <string name="failed">Failed to initialize Youtube Player</string>
+
+    <string name="translate_loading">Translating...</string>
+
+    <string name="lang_en">en</string>
+    <string name="lang_pt">pt</string>
+    <string name="lang_it">it</string>
+    <string name="lang_es">es</string>
+    <string name="lang_zh">zh</string>
+    <string name="lang_de">de</string>
+    <string name="lang_ru">ru</string>
+    <string name="lang_fr">fr</string>
+    <string name="lang_ja">ja</string>
+    <string name="lang_pl">pl</string>
+
+    <string name="text_en">English</string>
+    <string name="text_pt">Portuguese</string>
+    <string name="text_it">Italy</string>
+    <string name="text_es">Spanish</string>
+    <string name="text_zh">Chinese</string>
+    <string name="text_de">German</string>
+    <string name="text_ru">Russian</string>
+    <string name="text_fr">French</string>
+    <string name="text_ja">Japanese</string>
+    <string name="text_pl">Polish</string>
+
+</resources>
